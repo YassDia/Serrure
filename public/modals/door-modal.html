@@ -1,0 +1,28 @@
+<!-- MODAL PORTE -->
+<div id="doorModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Ajouter une Porte</h2>
+            <button class="close-modal" onclick="closeModal('doorModal')">&times;</button>
+        </div>
+        <form id="doorForm">
+            <div class="form-group">
+                <label>Nom de la Porte *</label>
+                <input type="text" name="nom" required placeholder="Ex: Bureau Principal">
+            </div>
+            <div class="form-group">
+                <label>Description</label>
+                <textarea name="description" rows="3" placeholder="Description de la porte..."></textarea>
+            </div>
+            <div class="form-group">
+                <label>Localisation</label>
+                <input type="text" name="localisation" placeholder="Ex: Bâtiment A - RDC">
+            </div>
+            <div class="form-group">
+                <label>ID ESP32 *</label>
+                <input type="text" name="esp32_id" required placeholder="Ex: ESP32_DOOR_001">
+            </div>
+            <button type="submit" class="btn-primary">Enregistrer</button>
+        </form>
+    </div>
+</div>

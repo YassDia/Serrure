@@ -1,0 +1,29 @@
+<div class="tab-header">
+    <h2>🚪 Gestion des Portes</h2>
+    <button class="btn-primary" onclick="openModal('doorModal')">+ Ajouter Porte</button>
+</div>
+
+<div class="table-container">
+    <table id="doorsTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Localisation</th>
+                <th>ESP32 ID</th>
+                <th>IP</th>
+                <th>État</th>
+                <th>Statut</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="8" style="text-align: center; padding: 40px;">
+                    <div class="loading-spinner"></div>
+                    Chargement...
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

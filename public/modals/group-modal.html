@@ -1,0 +1,24 @@
+<!-- MODAL GROUPE -->
+<div id="groupModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Créer un Groupe</h2>
+            <button class="close-modal" onclick="closeModal('groupModal')">&times;</button>
+        </div>
+        <form id="groupForm">
+            <div class="form-group">
+                <label>Nom du Groupe *</label>
+                <input type="text" name="nom" required placeholder="Ex: Employés de bureau">
+            </div>
+            <div class="form-group">
+                <label>Description</label>
+                <textarea name="description" rows="3" placeholder="Description du groupe..."></textarea>
+            </div>
+            <div class="form-group">
+                <label>Couleur</label>
+                <input type="color" name="couleur" value="#3B82F6" style="width: 100px; height: 40px; cursor: pointer;">
+            </div>
+            <button type="submit" class="btn-primary">Créer le Groupe</button>
+        </form>
+    </div>
+</div>

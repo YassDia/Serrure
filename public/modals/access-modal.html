@@ -1,0 +1,64 @@
+<!-- MODAL DROIT D'ACCÈS -->
+<div id="accessModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Ajouter un Droit d'Accès</h2>
+            <button class="close-modal" onclick="closeModal('accessModal')">&times;</button>
+        </div>
+        <form id="accessForm">
+            <div class="form-group">
+                <label>Type d'Accès *</label>
+                <select id="accessType" onchange="toggleAccessType()" required>
+                    <option value="">Sélectionner un type</option>
+                    <option value="badge">Badge individuel</option>
+                    <option value="group">Groupe</option>
+                </select>
+            </div>
+            <div class="form-group" id="badgeSelectGroup" style="display: none;">
+                <label>Badge *</label>
+                <select name="badge_id" id="accessBadgeId"></select>
+            </div>
+            <div class="form-group" id="groupSelectGroup" style="display: none;">
+                <label>Groupe *</label>
+                <select name="group_id" id="accessGroupId"></select>
+            </div>
+            <div class="form-group">
+                <label>Porte *</label>
+                <select name="door_id" id="accessDoorId" required></select>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Heure Début</label>
+                    <input type="time" name="heure_debut" value="00:00">
+                </div>
+                <div class="form-group">
+                    <label>Heure Fin</label>
+                    <input type="time" name="heure_fin" value="23:59">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Jours de la semaine</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" value="1" checked> Lun</label>
+                    <label><input type="checkbox" value="2" checked> Mar</label>
+                    <label><input type="checkbox" value="3" checked> Mer</label>
+                    <label><input type="checkbox" value="4" checked> Jeu</label>
+                    <label><input type="checkbox" value="5" checked> Ven</label>
+                    <label><input type="checkbox" value="6" checked> Sam</label>
+                    <label><input type="checkbox" value="7" checked> Dim</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Date Début</label>
+                    <input type="date" name="date_debut">
+                </div>
+                <div class="form-group">
+                    <label>Date Fin (optionnel)</label>
+                    <input type="date" name="date_fin">
+                </div>
+            </div>
+            <button type="submit" class="btn-primary">Enregistrer</button>
+        </form>
+    </div>
+</div>

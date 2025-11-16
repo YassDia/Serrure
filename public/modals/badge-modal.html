@@ -1,0 +1,25 @@
+<!-- MODAL BADGE -->
+<div id="badgeModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Ajouter un Badge</h2>
+            <button class="close-modal" onclick="closeModal('badgeModal')">&times;</button>
+        </div>
+        <form id="badgeForm">
+            <div class="form-group">
+                <label>Utilisateur *</label>
+                <select name="user_id" id="badgeUserId" required></select>
+            </div>
+            <div class="form-group">
+                <label>UID du Badge (format HEX) *</label>
+                <input type="text" name="badge_uid" placeholder="ex: A1B2C3D4" required pattern="[A-Fa-f0-9]+">
+                <small style="color: #666; font-size: 12px;">Format hexadécimal uniquement (0-9, A-F)</small>
+            </div>
+            <div class="form-group">
+                <label>Date d'Expiration (optionnel)</label>
+                <input type="date" name="date_expiration">
+            </div>
+            <button type="submit" class="btn-primary">Enregistrer</button>
+        </form>
+    </div>
+</div>

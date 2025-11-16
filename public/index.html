@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Système de Contrôle d'Accès</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- PAGE DE CONNEXION -->
+        <div id="loginPage" class="login-container">
+            <div class="login-header">
+                <div class="logo">🔐</div>
+                <h1>Contrôle d'Accès</h1>
+                <p>Système de gestion des badges RFID</p>
+            </div>
+
+            <div id="loginAlert" class="alert"></div>
+
+            <form id="loginForm">
+                <div class="form-group-login">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="admin@example.com">
+                </div>
+
+                <div class="form-group-login">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="password" name="password" required placeholder="••••••••">
+                </div>
+
+                <button type="submit" class="btn">Se connecter</button>
+            </form>
+        </div>
+
+        <!-- DASHBOARD -->
+        <div id="dashboard" class="dashboard">
+            <!-- HEADER -->
+            <div id="header-container"></div>
+
+            <!-- NAVIGATION -->
+            <div id="nav-container"></div>
+
+            <!-- CONTENU PRINCIPAL -->
+            <div class="content">
+                <div id="content-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTAINER POUR LES MODALS -->
+    <div id="modals-container"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <!-- Initialisation des modals - doit être chargé avant app.js -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!-- MODAL MEMBRES DU GROUPE -->
+<div id="groupMembersModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Membres du Groupe: <span id="groupMemberTitle"></span></h2>
+            <button class="close-modal" onclick="closeModal('groupMembersModal')">&times;</button>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <button class="btn-primary" onclick="openAddMemberModal()">+ Ajouter un Membre</button>
+        </div>
+        <div class="table-container">
+            <table id="groupMembersTable">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Email</th>
+                        <th>Ajouté le</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL AJOUTER MEMBRE -->
+<div id="addMemberModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Ajouter un Membre</h2>
+            <button class="close-modal" onclick="closeModal('addMemberModal')">&times;</button>
+        </div>
+        <form id="addMemberForm">
+            <div class="form-group">
+                <label>Utilisateur *</label>
+                <select name="user_id" id="memberUserId" required></select>
+            </div>
+            <button type="submit" class="btn-primary">Ajouter</button>
+        </form>
+    </div>
+</div>
